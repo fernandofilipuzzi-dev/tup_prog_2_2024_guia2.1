@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 286);
+            this.ClientSize = new System.Drawing.Size(570, 286);
             this.Controls.Add(this.tbImpresoRegistro);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbxRegistros);

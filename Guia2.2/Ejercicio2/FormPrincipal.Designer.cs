@@ -28,20 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnMostrarLiquidaciones = new System.Windows.Forms.Button();
+            this.btnMostrarReciboSueldo = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(18, 92);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(677, 324);
+            this.textBox1.TabIndex = 0;
+            // 
+            // btnRegistrarEmpleado
+            // 
+            this.btnRegistrarEmpleado.Location = new System.Drawing.Point(596, 7);
+            this.btnRegistrarEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado";
+            this.btnRegistrarEmpleado.Size = new System.Drawing.Size(131, 52);
+            this.btnRegistrarEmpleado.TabIndex = 1;
+            this.btnRegistrarEmpleado.Text = "Registrar Empleado";
+            this.btnRegistrarEmpleado.UseVisualStyleBackColor = true;
+            this.btnRegistrarEmpleado.Click += new System.EventHandler(this.btnRegistrarEmpleado_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(703, 92);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(302, 324);
+            this.listBox1.TabIndex = 2;
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(735, 5);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(131, 54);
+            this.btnGenerar.TabIndex = 3;
+            this.btnGenerar.Text = "Generar Liquidaciones";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnMostrarLiquidaciones
+            // 
+            this.btnMostrarLiquidaciones.Location = new System.Drawing.Point(874, 5);
+            this.btnMostrarLiquidaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMostrarLiquidaciones.Name = "btnMostrarLiquidaciones";
+            this.btnMostrarLiquidaciones.Size = new System.Drawing.Size(131, 53);
+            this.btnMostrarLiquidaciones.TabIndex = 4;
+            this.btnMostrarLiquidaciones.Text = "Mostrar Liquidaciones";
+            this.btnMostrarLiquidaciones.UseVisualStyleBackColor = true;
+            this.btnMostrarLiquidaciones.Click += new System.EventHandler(this.btnMostrarLiquidaciones_Click);
+            // 
+            // btnMostrarReciboSueldo
+            // 
+            this.btnMostrarReciboSueldo.Location = new System.Drawing.Point(18, 7);
+            this.btnMostrarReciboSueldo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMostrarReciboSueldo.Name = "btnMostrarReciboSueldo";
+            this.btnMostrarReciboSueldo.Size = new System.Drawing.Size(131, 52);
+            this.btnMostrarReciboSueldo.TabIndex = 5;
+            this.btnMostrarReciboSueldo.Text = "Mostrar recibo sueldo";
+            this.btnMostrarReciboSueldo.UseVisualStyleBackColor = true;
+            this.btnMostrarReciboSueldo.Click += new System.EventHandler(this.btnMostrarReciboSueldo_Click);
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1022, 424);
+            this.Controls.Add(this.btnMostrarReciboSueldo);
+            this.Controls.Add(this.btnMostrarLiquidaciones);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnRegistrarEmpleado);
+            this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnRegistrarEmpleado;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnMostrarLiquidaciones;
+        private System.Windows.Forms.Button btnMostrarReciboSueldo;
     }
 }
 
