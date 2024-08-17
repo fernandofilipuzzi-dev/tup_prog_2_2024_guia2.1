@@ -1,1 +1,1 @@
-# tup_prog_2_2024_guia1.2
+# TUP Programación 2 - 2024 - Guía 2.1 - Solución
