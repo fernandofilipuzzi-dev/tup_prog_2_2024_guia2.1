@@ -83,7 +83,7 @@
             this.btnMostrarLiquidaciones.Location = new System.Drawing.Point(806, 8);
             this.btnMostrarLiquidaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMostrarLiquidaciones.Name = "btnMostrarLiquidaciones";
-            this.btnMostrarLiquidaciones.Size = new System.Drawing.Size(131, 50);
+            this.btnMostrarLiquidaciones.Size = new System.Drawing.Size(155, 50);
             this.btnMostrarLiquidaciones.TabIndex = 4;
             this.btnMostrarLiquidaciones.Text = "Mostrar Liquidaciones(3a)";
             this.btnMostrarLiquidaciones.UseVisualStyleBackColor = true;

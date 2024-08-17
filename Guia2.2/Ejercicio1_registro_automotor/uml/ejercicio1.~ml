@@ -402,7 +402,7 @@
 <XPD:REF name="Views[1]">8Xahz/2jK0SrK1J/jgHy4wAA</XPD:REF>
 <XPD:REF name="Views[2]">BDoCabyIvEe0czMnoeolsgAA</XPD:REF>
 <XPD:REF name="Views[3]">/dtmY1lAnUWQ4WtdZfMbhQAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="ESnq4kgc/0ik9HFpXKa3fgAA">
 <XPD:ATTR name="Name" type="string">RegistrarVehiculo</XPD:ATTR>
 <XPD:REF name="Owner">Y/ZVXh6dCkyE3Z5nNZgp4QAA</XPD:REF>
@@ -430,6 +430,17 @@
 <XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="v62UTb/hN0CHw6YwBN3W2gAA">
 <XPD:ATTR name="Name" type="string">int idx</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">7bt7/cfHiU2YxetDic9BnwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="g+bTBYNMx0yKVpf2TaKcwQAA">
+<XPD:ATTR name="Name" type="string">GenerarPatente</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:REF name="Owner">Y/ZVXh6dCkyE3Z5nNZgp4QAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="gJ80hhzd9kCSX/k2bGfgNAAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">g+bTBYNMx0yKVpf2TaKcwQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Associations" type="integer">6</XPD:ATTR>
