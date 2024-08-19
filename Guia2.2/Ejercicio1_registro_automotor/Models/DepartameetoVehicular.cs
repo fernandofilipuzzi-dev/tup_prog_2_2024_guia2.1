@@ -19,7 +19,6 @@ namespace Ejercicio1.Models
 
         public RegistroVehiculo RegistrarVehiculo(Persona propietario)
         {
-
             string patente=GenerarPatente();
             int serie = nroSerie++;
             RegistroVehiculo nuevo = new RegistroVehiculo(patente, propietario, serie);
@@ -40,7 +39,6 @@ namespace Ejercicio1.Models
 
             return patente;
         }
-
 
         public RegistroVehiculo VerRegistro(int idx)
         {

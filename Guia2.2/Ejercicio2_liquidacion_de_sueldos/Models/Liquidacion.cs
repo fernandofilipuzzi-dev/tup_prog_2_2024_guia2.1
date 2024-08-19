@@ -98,7 +98,8 @@ namespace Ejercicio2.Models
         {
             get
             {
-                return Nominal - Neto;
+                //return Nominal - Neto; ocurre un bucle así! -porque?
+                return Nominal - MontoObraSocial - MontoJubilacion - MontoGremial;
             }
         }
 
@@ -134,13 +135,28 @@ namespace Ejercicio2.Models
             string ex50 = $"Extras al 50%({HorasExtras50})";
             string ex100 = $"Extras al 50%({HorasExtras100})";
 
+            string os = $"Obra Social({PorcObraSocial}%)";
+            string jub = $"Jubilación({PorcJubilacion}%)";
+            string grem = $"Ap. Gremiales({PorcGremial}%)";
+
+            string prod = $"Productividad";
+
             string impreso = $@"
 Empleado {Empleado.ApellidoNombre}
+{"-".PadRight(70, '-')}
 {"Concepto",30}{"Haberes",20}{"Descuentos",20}
 {"Básico",30}{MontoBase,20:f2}{" ",20}
 {ant,30}{MontoAntiguedad,20:f2}{" ",20}
 {ex50,30}{MontoHorasExtras50,20:f2}{" ",20}
 {ex100,30}{MontoHorasExtras100,20:f2}{" ",20}
+{os,30}{"",20}{MontoObraSocial,20:f2}
+{jub,30}{"",20}{MontoJubilacion,20:f2}
+{grem,30}{"",20}{MontoGremial,20:f2}
+{prod,30}{Productividad,20}{"",20}
+{"-".PadRight(70,'-')}
+{"Totales",30}{Neto+Productividad,20:f2}{"",20}
+{"-".PadRight(70, '-')}
+{"",30}{"A Cobrar",20}{ACobrar,20:f2}
 ";
             return impreso;
         }

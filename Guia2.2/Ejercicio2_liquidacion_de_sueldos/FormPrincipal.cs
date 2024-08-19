@@ -20,26 +20,39 @@ namespace Ejercicio2
             InitializeComponent();
 
             empresa.AñoActual = 2024;
+
+            
         }
 
         private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
         {
-            string apellido = "Schemberger";
-            string nombre = "Estefania";
-            int dni = 40176474;
-            
-            double montoBasico = 4000;
-            int horaExt50 = 5;
-            int horaExt100 = 4;
+            //1-caso registrar empleados
+            FormRegistrarEmpleado formReg=new FormRegistrarEmpleado();
 
-            Empleado em=empresa.RegistrarEmpleado(dni,apellido, nombre);
-            em.MontoBasicoNominal = montoBasico;
-            em.HorasExtras50 = horaExt50;
-            em.HorasExtras100 = horaExt100;
+            if (formReg.ShowDialog() == DialogResult.OK)
+            {
+                string apellido = formReg.tbApellido.Text;
+                string nombre = formReg.tbNombre.Text;
+
+                //harcodeo
+                int dni = 40176474;
+
+                double montoBasico = 4000;
+                int horaExt50 = 5;
+                int horaExt100 = 4;
+
+                Empleado em = empresa.RegistrarEmpleado(dni, apellido, nombre);
+                em.MontoBasicoNominal = montoBasico;
+                em.HorasExtras50 = horaExt50;
+                em.HorasExtras100 = horaExt100;
+            }
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            //2- Generar las liquidaciones en un determinado año y mes.
+
+            //harcodeo
             int año = 2024;
             int mes = 8;
             empresa.GenerarLiquidacion(año, mes);
@@ -47,20 +60,25 @@ namespace Ejercicio2
 
         private void btnMostrarLiquidaciones_Click(object sender, EventArgs e)
         {
+            // 3 - Mostrar liquidaciones según año y mes dados.
+            tbMultilineauNReciboDeSueldo.Clear();
+
             int año = 2024;
             int mes = 8;
+            int n = 1;
             foreach (Liquidacion liquidacion in empresa.ListarLiquidaciones(año, mes))
-            { 
-                listBox1.Items.Add(liquidacion.VerImpreso());
+            {
+                tbMultilineauNReciboDeSueldo.Text += $"---{n++}\r\n";
+                tbMultilineauNReciboDeSueldo.Text += liquidacion.VerImpreso();
             }
         }
 
-        private void btnMostrarReciboSueldo_Click(object sender, EventArgs e)
-        {
-            int año = 2024;
-            int mes = 8;
-            int dni = 40176474;
-            textBox1.Text= empresa.MostrarReciboSueldo(año, mes, dni);
-        }
+        //private void btnMostrarReciboSueldo_Click(object sender, EventArgs e)
+        //{
+        //    int año = 2024;
+        //    int mes = 8;
+        //    int dni = 40176474;
+        //    tbMultilineauNReciboDeSueldo.Text= empresa.MostrarReciboSueldo(año, mes, dni);
+        //}
     }
 }
