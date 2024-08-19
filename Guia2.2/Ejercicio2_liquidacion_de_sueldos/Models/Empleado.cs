@@ -26,15 +26,12 @@ namespace Ejercicio2.Models
         public int HorasExtras50{get;set;}
         public int HorasExtras100 { get; set; }
 
-    public Empleado(int dni,string apellido,string nombre, int añoContrato)
+        public Empleado(int dni,string apellido,string nombre, int añoContrato)
         {
             this.DNI = dni;
             this.Apellido = apellido;
             this.Nombre = nombre;
             this.AñoContrato = añoContrato;
         }
-
-      
-
     }
 }
